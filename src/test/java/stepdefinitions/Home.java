@@ -12,7 +12,9 @@ public class Home {
 	public void the_user_navigates_to_home_page() {
 		driver.get("https://dsportalapp.herokuapp.com/home");
 		driver.manage().window().maximize();
+		// comment close window
 		driver.close();
+
 	}
 
 }
