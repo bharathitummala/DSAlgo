@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="29.763" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="Home page Feature" name="User launches home page of an dsalgo project" time="4.328">
+<system-out><![CDATA[
+Given The user navigates to Home page.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Sign in  with valid credentials - Example #1.1" time="3.404">
+<system-out><![CDATA[
+Given I navigate to login...................................................passed
+When I enter Numpy@sdet102 and Abcd1234!....................................passed
+And I click Login button....................................................passed
+Then Success message "You are logged in" is displayed.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Sign in with invalid credentials - Example #1.1" time="3.241">
+<system-out><![CDATA[
+Given I navigate to login...................................................passed
+When I enter Numpy@sdet102 and password1....................................passed
+And I click Login button....................................................passed
+Then Error message "Invalid Username and Password" is displayed.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Sign in with invalid credentials - Example #1.2" time="3.028">
+<system-out><![CDATA[
+Given I navigate to login...................................................passed
+When I enter Numpy@sdet10 and password1.....................................passed
+And I click Login button....................................................passed
+Then Error message "Invalid Username and Password" is displayed.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Login feature" name="Sign in with invalid credentials - Example #1.3" time="3.132">
+<system-out><![CDATA[
+Given I navigate to login...................................................passed
+When I enter Numpy@sdet10 and password1.....................................passed
+And I click Login button....................................................passed
+Then Error message "Invalid Username and Password" is displayed.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Register feature" name="User creates an account in Register page - Example #1.1" time="3.224">
+<system-out><![CDATA[
+Given I navigate to Register page...........................................passed
+When I enter USERNAME and Abcd1234! and Abcd1234!...........................passed
+And I click Register button.................................................passed
+Then I see success message "New Account Created. You are logged in as" is displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register feature" name="User enters invalid data in Register page - Example #1.1" time="3.141">
+<system-out><![CDATA[
+Given I navigate to Register page...........................................passed
+When I enter invalid &**&** and testpassword and testpassword...............passed
+And I click Register button.................................................passed
+Then I see failure message "password_mismatch:The two password fields didn’t match." is displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register feature" name="User enters invalid data in Register page - Example #1.2" time="3.039">
+<system-out><![CDATA[
+Given I navigate to Register page...........................................passed
+When I enter invalid Numpy@sdet102 and Abcd1234! and Abcd1234!..............passed
+And I click Register button.................................................passed
+Then I see failure message "password_mismatch:The two password fields didn’t match." is displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Register feature" name="User enters invalid data in Register page - Example #1.3" time="3.034">
+<system-out><![CDATA[
+Given I navigate to Register page...........................................passed
+When I enter invalid Numpy@sdet102 and Abcd1234! and Abcd123................passed
+And I click Register button.................................................passed
+Then I see failure message "password_mismatch:The two password fields didn’t match." is displayed.passed
+]]></system-out>
+</testcase>
+</testsuite>
