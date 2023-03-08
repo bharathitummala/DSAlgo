@@ -13,10 +13,15 @@ public class HomeElements {
 
 	@FindBy(xpath = "//div[@class='alert alert-primary']")
 	WebElement successmsg;
+
 	@FindBy(xpath = "//ul/a[contains(text(),'Register')]")
 	WebElement registerurl;
 	@FindBy(xpath = "//a[@href='graph']")
 	WebElement graphurlclick;
+	@FindBy(xpath = "//a[@href='/login']")
+	WebElement siginUrl;
+	@FindBy(xpath = "//div[@class='alert alert-primary']")
+	WebElement loginerrormsg;
 
 	public String getsuccessmsg() {
 		return successmsg.getText();
@@ -28,6 +33,14 @@ public class HomeElements {
 
 	public void clickgraphUrl() {
 		graphurlclick.click();
+	}
+
+	public void clickSignin() {
+		siginUrl.click();
+	}
+
+	public String retrieveLoginMsg() {
+		return loginerrormsg.getText();
 	}
 
 }
