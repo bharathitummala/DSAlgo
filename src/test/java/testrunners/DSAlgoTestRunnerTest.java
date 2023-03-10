@@ -11,6 +11,6 @@ import io.cucumber.junit.CucumberOptions;
 		"html:target/SystemTestReports/index.html", "json:target/SystemTestReports/json/report.json",
 		"junit:target/SystemTestReports/junit/report.xml",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, dryRun = false, monochrome = true)
-public class DSAlgoTestRunner {
+public class DSAlgoTestRunnerTest {
 
 }
