@@ -1,10 +1,10 @@
 package stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import hooks.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,14 +12,13 @@ import pageobjectmodel.HomeElements;
 import pageobjectmodel.LoginElements;
 
 public class Home {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver = Hooks.getDriver();
 
 	HomeElements homeelements = PageFactory.initElements(driver, HomeElements.class);
 
 	@Given("The user navigates to Home page")
 	public void the_user_navigates_to_home_page() {
 		driver.get("https://dsportalapp.herokuapp.com/home");
-		driver.manage().window().maximize();
 	}
 
 	@When("The user click on Get started button")

@@ -6,10 +6,10 @@ import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import hooks.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,7 +17,7 @@ import pageobjectmodel.RegisterExcelElements;
 import utilities.ExcelReader;
 
 public class RegisterExcel {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver = Hooks.getDriver();
 
 	RegisterExcelElements registerExcelElements = PageFactory.initElements(driver, RegisterExcelElements.class);
 	String expectedmessage;

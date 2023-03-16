@@ -1,18 +1,18 @@
 package stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import dsutilities.LoggerLoad;
+import hooks.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjectmodel.LoginElements;
 
 public class Login {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver = Hooks.getDriver();
 
 	// Login WebElements
 	LoginElements loginElements = PageFactory.initElements(driver, LoginElements.class);

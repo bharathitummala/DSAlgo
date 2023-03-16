@@ -1,10 +1,10 @@
 package stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import hooks.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,7 +13,7 @@ import pageobjectmodel.RegisterElements;
 import pageobjectmodel.UserData;
 
 public class Register {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver = Hooks.getDriver();
 	RegisterElements registerElements = PageFactory.initElements(driver, RegisterElements.class);
 
 	@Given("I navigate to Register page")
